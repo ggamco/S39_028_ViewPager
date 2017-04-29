@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(myPagerAdapter);
 
+        //Añadimos un transicion
+        //viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
+        viewPager.setPageTransformer(true, new DepthPageTransformer());
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
